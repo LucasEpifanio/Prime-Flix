@@ -2,16 +2,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 14px;
+  margin-top: 40px;
+  color: #fff;
 }
 
 .filme-info {
-  margin-top: 18px;
   display: flex;
   flex-direction: column;
   max-width: 800px;
   padding: 0 8px;
-  margin: 0 auto;
+  margin: 40px auto;
+  color: #fff;
 }
 
 .title-info{
@@ -30,6 +31,7 @@ p .status{
 
 .filme-info h1 {
   margin: 14px 0;
+  color: #fff;
 }
 
 .filme-info img {
@@ -42,11 +44,13 @@ p .status{
 
 .filme-info h3 {
   margin-top: 14px;
+  color: #fff;
 }
 
 .filme-info span {
   margin: 8px 0;
   font-size: 1.1rem;
+  color: #fff;
 }
 
 .area-buttons {

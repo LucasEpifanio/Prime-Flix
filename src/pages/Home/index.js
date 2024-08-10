@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
-import api from "../../services/api";
+import React, { useEffect, useState } from "react";
+import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import api from "../../services/api";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./home.css";
-
-// URL API: https://api.themoviedb.org/3/movie/now_playing?api_key=d3737e313360a6c56d58916c0228c28a&language=pt-BR&page=1%27
 
 function Home() {
   const [filmes, setFilmes] = useState([]);
@@ -34,22 +35,39 @@ function Home() {
     );
   }
 
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    nextArrow: <button></button>,
+    prevArrow: <button></button>,
+  };
+
   return (
     <div className="container">
-      <div className="lista-filmes">
-        {filmes.map((filme) => {
+      <div className="filmes-title">
+        <h2 className="title-cartaz">Filmes em cartaz</h2>
+      </div>
+      <Slider {...settings}>
+        {filmes.map((filme, index) => {
           return (
-            <article key={filme.id}>
-              <strong>{filme.title}</strong>
-              <img
-                src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`}
-                alt={filme.title}
-              />
-              <Link to={`/filme/${filme.id}`}>Acessar</Link>
-            </article>
+            <div key={filme.id}>
+              <article className="carrossel-filme">
+                <span className="filme-numero">{index + 1}</span>
+                <img
+                  src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`}
+                  alt={filme.title}
+                />
+                <Link to={`/filme/${filme.id}`}>Acessar</Link>
+              </article>
+            </div>
           );
         })}
-      </div>
+      </Slider>
     </div>
   );
 }
