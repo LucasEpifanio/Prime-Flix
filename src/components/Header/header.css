@@ -5,10 +5,10 @@ header{
     align-items: center;
     justify-content:space-between;
     width: 100%;
-    height:110px;
+    height:115px;
     background-color: #fcd200;
     box-shadow: 0 5.5px 0 0px #f85959, 0 13px 0 0px #39a2db,
-    0 15px 9px 0px #39a2db;    
+    0 15px 9px 0px #39a2db;   
 }
 
 .logo{
@@ -17,7 +17,7 @@ header{
     cursor: pointer;
     color: #171717;
     font-weight: bold;
-    margin-left: 3rem;
+    margin-left: 4rem;
 }
 
 .button {
@@ -31,7 +31,7 @@ header{
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    margin-right: 3rem;
+    margin-right: 4rem;
   }
   
   .button span {
